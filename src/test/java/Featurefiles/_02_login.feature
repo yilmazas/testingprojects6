@@ -5,21 +5,27 @@ Feature: Login MultiScenario
 
   Scenario Outline: Login Functionality
 
-    When Enter your valid  "<username>" and "<password>"
-    Then User should successfully login to the system
-    And User should logout from the system
+    When Enter your valid  "<valid username>" and "<valid password>"
+    And User should successfully login to the system
+    Then User should logout from the system
+
+    When Enter valid "<valid username>" and invalid "<invalid password>"
+    Then Unsuccessfull attempt should be displayed
 
 
-    When Enter invalid "<username>" and valid "<password>"
-    Then Unsuccessfulll attempt should be displayed
+    When Enter invalid "<invalid username>" and valid "<valid password>"
+    Then Unsuccessfull attempt should be displayed
 
-
-    When Enter valid "<username>" and invalid "<password>"
-    Then Unsuccessfulll attempt should be displayed
 
     Examples:
-      | username | password|
-      |
+      | valid password | valid username | invalid password|invalid username|
+      |12345566        | cihan101       |4543534          |4543rfds        |
+
+
+
+
+
+
 
 
 

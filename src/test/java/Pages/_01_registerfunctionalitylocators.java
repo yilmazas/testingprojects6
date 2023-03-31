@@ -53,6 +53,24 @@ public class _01_registerfunctionalitylocators extends Parent {
     @FindBy(xpath = "//p[text()='Your account was created successfully. You are now logged in.']")
     public WebElement successMessage;
 
+    @FindBy(xpath = "//input[@name='username']")
+    public WebElement loginUsername;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement loginPassword;
+
+    @FindBy(xpath = "(//input[@type='submit'])[1]")
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//a[text()='Log Out']")
+    public WebElement logoutLink;
+
+    @FindBy(xpath = "//b[text()='Welcome']")
+    public WebElement loginSuccessMessage;
+
+    @FindBy(xpath = "//p[@class='error']")
+    public WebElement loginUnsuccessMessage;
+
 
 
 
