@@ -71,6 +71,12 @@ public class _01_registerfunctionalitylocators extends Parent {
     @FindBy(xpath = "//p[@class='error']")
     public WebElement loginUnsuccessMessage;
 
+    @FindBy(linkText = "Bill Pay")
+    public WebElement billPay;
+
+
+
+
 
 
 
